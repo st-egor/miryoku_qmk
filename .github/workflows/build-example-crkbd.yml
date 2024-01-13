@@ -1,11 +1,14 @@
 # Copyright 2021 Manna Harbour
 # https://github.com/manna-harbour/miryoku
-
-name: 'Build Example crkbd'
+​
+name: 'Build Unicorne'
 on:
   - workflow_dispatch
 jobs:
   build:
     uses: ./.github/workflows/main.yml
     with:
-      keyboard: '["crkbd"]'
+      keyboard: '["boardsource/unicorne"]'
+      alphas: '["colemak"]'
+      clipboard: '["win"]'
+      merge: '["qmk/qmk_firmware/master"]'
